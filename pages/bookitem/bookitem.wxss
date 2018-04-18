@@ -20,7 +20,7 @@
   margin-top: 20rpx;
   width: 80%; 
 }
-.summery {
+.summary {
   width: 80%;
   margin: 30rpx auto;
 }
@@ -29,6 +29,13 @@
   font-size: 40rpx;
   margin-bottom: 20rpx;
 }
+.comment{
+  display:block;
+  font-size:24rpx;
+  margin-top:20rpx;
+  width:80%;
+}
+
 .content {
   font-size: 30rpx;
   color: #666;
@@ -36,5 +43,4 @@
    /* text-indent: 2em;  */
   padding: 2em; 
 }
-
-
+/* pages/bookitem/bookitem.wxss */

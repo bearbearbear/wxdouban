@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="meta">
+    <image class="cover" src="{{book.covers.large}}" mode="aspectFit"></image>
+    <text class="title">{{book.name}}</text>
+    <text class="info">评分：{{book.comment_average_star}}</text>
+     <text class="info" wx:if="{{book.publisher}}">出版社:{{book.publisher}}</text>
+     <text class="info" wx:if="{{book.author}}">作者：<block wx:for="{{book.author}}" wx:key="id">{{item}} </block></text>  
+  </view>
+  <view class="comment">
+    <text class="label">评论
+      <block wx:for="{{book.comment}}">
+        <text class="comment">评分：{{item.star}}</text>
+        <text class="comment">内容：{{item.text}}</text>
+      </block>    
+    </text>
+  </view>
+</view>

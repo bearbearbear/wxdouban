@@ -1,0 +1,99 @@
+ .book-item {
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #eee;
+  cursor: pointer;
+} 
+
+.book-item .cover {
+  margin-right: 20rpx;
+  width: 128rpx;
+  height: 168rpx;
+}
+.book-item .meta {
+  flex: 1;
+}
+.book-item .meta .title ,
+.book-item .meta .sub-title{
+   display: block; 
+   margin-bottom: 15rpx;
+}
+.book-item .meta .title {
+  font-size: 32rpx;
+}
+.book-item .meta .sub-title {
+  font-size: 28rpx;
+  color: #999;
+}
+.book-item .meta .publisher {
+  font-size: 30rpx;
+  color: #666;
+}
+.book-item .rating text {
+  flex: 1;
+  display: inline-block;
+  width: 40rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  text-align: center;
+  background-color: red;
+  color: #fff;
+  border-radius: 20rpx;
+  padding: 10rpx;
+}
+
+.bottom-view .loading {
+  text-align: center;
+  margin: 40rpx 0;
+  color: #999
+}
+.bottom-view .loading-complete {
+  text-align: center;
+  margin: 40rpx 0;
+  color: #999
+}
+
+.search-bar {
+  height: 88rpx;
+  width: 100%;
+  background-color: #efeff4;
+  display: flex;
+  flex-direction: row;
+}
+
+.search-bar .search-bar_box {
+  display: flex;
+  flex-direction: row;
+  border: 1rpx solid #eee;
+  border-radius: 10rpx;
+  margin: 10rpx;
+  background-color: #fff;
+  width: 80%;   
+  position: relative; 
+}
+
+.icon-search {
+  margin: 15rpx 20rpx;
+}
+.search_bar_input {
+  width: 75%;
+  margin: 5rpx 0; 
+  /* line-height: 28rpx */
+}
+.search-bar_clear {
+  margin-left: 10rpx;
+  margin-top: 8rpx;
+  flex: 1;
+  right: 10rpx;
+  top: 0;
+   position: absolute; 
+}
+.search-bar .search-bar_cancel-btn {
+  flex: 1;  
+  width: 20%;
+  text-align: center;
+  margin: 15rpx 0;
+  color: #09bb07;
+  white-space: nowrap;
+}

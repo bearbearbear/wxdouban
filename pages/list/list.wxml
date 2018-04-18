@@ -1,5 +1,5 @@
 
-  <navigator wx:for="{{ movies }}" url="../item/item?id={{item.id}}&type={{type}}">
+  <navigator wx:for="{{ movies }}">
     <view class="movie-item">
       <image class="poster" src="{{item.images.large}}"></image>
       <view class="meta">

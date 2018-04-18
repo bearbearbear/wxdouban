@@ -1,0 +1,36 @@
+<view class="search-bar">
+  <!-- 输入框 -->
+  <view class="search-bar_box">
+    <!-- 搜索icon -->
+    <icon class="icon-search" type="search" size="20"></icon>
+    <!-- 搜索输入框 -->
+    <input class="search_bar_input" placeholder="请输入关键字" value="{{searchQuery}}" bindinput="bookSearchInput" bindconfirm="bookSearchConfirm"></input>
+    <!-- 搜索内容清除按钮 -->
+    <view class="search-bar_clear" wx:if="{{searchQuery.length > 0}}" bindtap="bookSearchClear">
+      <!-- 清除icon -->
+      <icon type="clear" size="16"></icon>
+    </view>
+  </view>
+   
+  <!-- 搜索、取消按钮 -->
+  <view class="search-bar_cancel-btn" bindtap="bookSearchConfirm">
+      <text wx:enabled="{{searchQuery.length > 0}}" data-key='search'>搜索</text>
+  </view>
+</view>
+<view>
+  <text wx:if="{{isSearchResult}}">一共为您找到了{{searchResultCount}}个结果</text>
+</view>
+
+<navigator wx:for="{{books}}" url="../bookitem/bookitem?id={{item.id}}">
+  <view class="book-item">
+    <image class="cover" src="{{item.covers.small}}"></image>
+    <view class="meta">
+      <text class="title">{{item.name}}</text>
+        <view class="publisher">{{item.publisher}}</view>
+    </view>
+    <view class="rating">
+        <text>{{item.comment_average_star}}</text>
+    </view>      
+  </view>
+</navigator>
+

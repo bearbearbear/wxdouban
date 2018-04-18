@@ -6,6 +6,7 @@
     </swiper-item> 
     </swiper>
   </view>
+  
   <view class="board" scroll-y="true">
     <block wx:for="{{ boardItems }}" wx:key="key">
       <view class="board-item">
