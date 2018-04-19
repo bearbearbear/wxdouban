@@ -18,7 +18,7 @@
   </view>
 </view>
 <view>
-  <text wx:if="{{isSearchResult}}">一共为您找到了{{searchResultCount}}个结果</text>
+  <text wx:if="{{isSearchResult}}">一共为您找到了{{resultCount}}个结果</text>
 </view>
 
 <navigator wx:for="{{books}}" url="../bookitem/bookitem?id={{item.id}}">

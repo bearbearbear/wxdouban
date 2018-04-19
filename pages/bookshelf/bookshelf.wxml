@@ -1,0 +1,12 @@
+<navigator wx:for="{{books}}" url="../bookitem/bookitem?id={{item.id}}">
+  <view class="book-item">
+    <image class="cover" src="{{item.covers.small}}"></image>
+    <view class="meta">
+      <text class="title">{{item.name}}</text>
+        <view class="publisher">{{item.publisher}}</view>
+    </view>
+    <view class="rating">
+        <text>{{item.comment_average_star}}</text>
+    </view>      
+  </view>
+</navigator>

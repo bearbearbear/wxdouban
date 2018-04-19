@@ -37,7 +37,7 @@
   font-size: 28rpx;
   font-weight: bold;
   text-align: center;
-  background-color: red;
+  background-color: goldenrod;
   color: #fff;
   border-radius: 20rpx;
   padding: 10rpx;

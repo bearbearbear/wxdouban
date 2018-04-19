@@ -1,26 +1,16 @@
-const app = getApp()
-
-var util = require('../../utils/list_search.js')
-
-// pages/booklist.js
+// pages/bookshelf/bookshelf.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    books:[], 
-    requestPath:{
-      "list":'https://www.easy-mock.com/mock/5acf2b009e1d8d12cbd79507/example/books/list',
-      "search": 'https://www.easy-mock.com/mock/5acf2b009e1d8d12cbd79507/example/books/search?q='
-    },
-    searchQuery:'',
-    isSearchResult:false,
-    resultCount:0
+    books: [],
+    requestPath: 'https://www.easy-mock.com/mock/5acf2b009e1d8d12cbd79507/example/bookshelf?userid=',
+    resultCount: 0
   },
 
-
-  fetchBookList:function(targetURL, isSearchResult, filter){
+  fetchBookList: function (targetURL) {
     let that = this
     wx.request({
       url: targetURL,
@@ -34,11 +24,11 @@ Page({
             that.setData({
               books: res.data.books,
               isSearchResult: isSearchResult,
-              resultCount:res.data.books.length
+              resultCount: res.data.books.length
             })
-            
+
             wx.setNavigationBarTitle({
-              title: isSearchResult? '搜索结果':'所有绘本'
+              title: '我的绘本'
             })
           }
         }
@@ -46,39 +36,13 @@ Page({
     })
   },
 
-  bookSearchInput:function(e) {
-    let that = this
-    var inputValue = e.detail.value;
-    that.setData({
-      searchQuery: inputValue
-    });
-    console.log("input changed:"+that.data.searchQuery)
-  },
 
-  bookSearchConfirm:function(e){
-    console.log("searchConfirmed:"+this.data.searchQuery)
-    //this.searchByText(this.data.searchQuery)
-    var searchURL = this.data.requestPath.search+this.data.searchQuery
-    this.fetchBookList(searchURL, true)
-
-  },
-
-  bookSearchClear:function(e){
-    console.log("searchQueryCleared")
-    this.fetchResultItemList()
-    this.setData({
-      searchQuery:''
-    })
-  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-    // 网络API调用
-    this.fetchBookList(this.data.requestPath.list, false)
-
+  
   },
 
   /**
