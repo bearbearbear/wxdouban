@@ -1,1 +1,81 @@
 /* pages/bookshelf/bookshelf.wxss */
+
+.user-info {
+  height:100rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  left: 20rpx;
+  display:flex;
+  align-items: center;
+}
+.user-info image {
+  width: 80rpx;
+  height: 80rpx;
+  padding: 10rpx; 
+}
+.user-info text {
+  font-size: 28rpx;
+  padding: 10rpx;
+}
+
+.book-item{
+  width: 33%;
+}
+
+.book-item .content{
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #eee;
+  cursor: pointer;
+} 
+
+.book-item .cover {
+  margin: 20rpx;
+  width: 128rpx;
+  height: 168rpx;
+}
+
+.book-item .title {
+  font-size: 24rpx;
+}
+
+
+.book-item .meta {
+  flex: 1;
+}
+.book-item .meta .title ,
+.book-item .meta .sub-title{
+   display: block; 
+   margin-bottom: 15rpx;
+}
+.book-item .meta .sub-title {
+  font-size: 28rpx;
+  color: #999;
+}
+.book-item .meta .publisher {
+  font-size: 30rpx;
+  color: #666;
+}
+.book-item .rating text {
+  flex: 1;
+  display: inline-block;
+  width: 40rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  text-align: center;
+  background-color: goldenrod;
+  color: #fff;
+  border-radius: 20rpx;
+  padding: 10rpx;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: flex-end;
+}

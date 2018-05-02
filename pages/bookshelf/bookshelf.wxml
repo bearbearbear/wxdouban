@@ -1,12 +1,15 @@
-<navigator wx:for="{{books}}" url="../bookitem/bookitem?id={{item.id}}">
-  <view class="book-item">
-    <image class="cover" src="{{item.covers.small}}"></image>
-    <view class="meta">
+<view class="user-info">
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <text class="nick-name">{{userInfo.nickName}}</text>
+    <text class="summary">书架上一共有{{resultCount}}本书</text>
+</view>
+<view class="container">
+  <view wx:for="{{books}}" class="book-item">
+    <navigator url="../bookitem/bookitem?id=item.id}}">
+    <view class="content">
+      <image class="cover" src="{{item.covers.small}}" tooltip="{{item.name}}"></image>
       <text class="title">{{item.name}}</text>
-        <view class="publisher">{{item.publisher}}</view>
     </view>
-    <view class="rating">
-        <text>{{item.comment_average_star}}</text>
-    </view>      
+    </navigator>
   </view>
-</navigator>
+  </view>
